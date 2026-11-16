@@ -68,11 +68,28 @@ export default function AppHeader({
                 sound.click(700, 0.05);
                 onOpenCart();
               }}
+              title="Keranjang Pesanan"
               aria-label={`Buka Keranjang Pesanan, ${cartCount} item`}
             >
-              <span className="cart-trigger-icon">🍱</span>
-              <span className="cart-trigger-label">Pesanan</span>
-              <span className="cart-trigger-count">{cartCount}</span>
+              <svg
+                className="cart-trigger-svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              {cartCount > 0 && (
+                <span className="cart-trigger-count">{cartCount}</span>
+              )}
             </button>
           )}
 
