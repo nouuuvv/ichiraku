@@ -7,34 +7,34 @@ export default function HeroFullscreen() {
       <div className="hero-fs-bg-glow" aria-hidden="true"></div>
 
       <div className="container hero-fs-inner">
-        {/* Left Column: Pure Minimalist Typography (No Left Buttons, Vertical Hiragana Preserved) */}
+        {/* Left Column: Typography & Hiragana */}
         <div className="hero-fs-left">
-          <div className="hero-fs-kicker">
-            <span className="kicker-line"></span>
-            <span>JAPANESE KITCHEN · EST. 2021</span>
+          {/* Desktop-only Latin Editorial Typography */}
+          <div className="hero-fs-desktop-latin">
+
+            <div className="hero-fs-headline-group">
+              <h1 className="hero-fs-title">
+                A little taste<br />
+                of <em>Japan.</em>
+              </h1>
+              <p className="hero-fs-tagline">SUSHI · RAMEN · GOOD MOMENTS</p>
+            </div>
           </div>
 
-          <div className="hero-fs-headline-group">
-            <h1 className="hero-fs-title">
-              A little taste<br />
-              of <em>Japan.</em>
-            </h1>
-            <p className="hero-fs-tagline">SUSHI · RAMEN · GOOD MOMENTS</p>
-          </div>
-
-          {/* Vertical Japanese Hiragana Calligraphy */}
+          {/* Vertical Japanese Hiragana (Always visible on Desktop & Mobile) */}
           <div className="hero-fs-hiragana-container">
             <div className="vertical-hiragana-col">
               <span className="hiragana-text">おいしい時間を。</span>
-              <span className="hiragana-sub">Oishii jikan o</span>
+              <span className="hiragana-sub hero-fs-desktop-latin">Oishii jikan o</span>
             </div>
             <div className="vertical-hiragana-col secondary">
               <span className="hiragana-text">いただきます</span>
-              <span className="hiragana-sub">Itadakimasu</span>
+              <span className="hiragana-sub hero-fs-desktop-latin">Itadakimasu</span>
             </div>
           </div>
 
-          <div className="hero-fs-meta">
+          {/* Desktop-only Meta Info */}
+          <div className="hero-fs-meta hero-fs-desktop-latin">
             <span>01 / 03</span>
             <span>MADE FRESH, SERVED WITH CARE · BANYUWANGI</span>
           </div>
@@ -44,7 +44,7 @@ export default function HeroFullscreen() {
         <div className="hero-fs-right">
           <div className="hero-fs-art-card">
             <div className="hero-fs-art-grain"></div>
-            <div className="hero-fs-vertical-edge">ICHIRAKU — JAPANESE KITCHEN</div>
+            <div className="hero-fs-vertical-edge hero-fs-desktop-latin">ICHIRAKU — JAPANESE KITCHEN</div>
 
             <div className="hero-fs-bowl">
               <div className="noodle-swirl"></div>
@@ -60,7 +60,7 @@ export default function HeroFullscreen() {
             </div>
 
             <div className="hero-fs-art-label">
-              <span>THE COMFORT BOWL</span>
+              <span className="hero-fs-desktop-latin">THE COMFORT BOWL</span>
               <strong>職人のこだわり</strong>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function HeroFullscreen() {
 
       {/* Floating Bottom Scroll Prompt */}
       <a href="#menu-catalog" className="hero-fs-scroll" aria-label="Scroll ke menu">
-        <span>SCROLL TO MENU</span>
+        <span className="hero-fs-desktop-latin">SCROLL TO MENU</span>
         <span className="scroll-arrow">↓</span>
       </a>
     </section>
