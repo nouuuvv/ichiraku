@@ -40,12 +40,9 @@ export default function HeroFullscreen() {
           </div>
         </div>
 
-        {/* Right Column: Centerpiece Visual Artwork */}
+        {/* Right Column: Clean Floating Bowl (No background card) */}
         <div className="hero-fs-right">
-          <div className="hero-fs-art-card">
-            <div className="hero-fs-art-grain"></div>
-            <div className="hero-fs-vertical-edge hero-fs-desktop-latin">ICHIRAKU — JAPANESE KITCHEN</div>
-
+          <div className="hero-fs-bowl-wrap">
             <div className="hero-fs-bowl">
               <div className="noodle-swirl"></div>
               <div className="bowl-topping egg"></div>
@@ -53,18 +50,14 @@ export default function HeroFullscreen() {
               <div className="bowl-topping nori"></div>
               <span className="bowl-topping scallion">✳</span>
             </div>
-
-            <div className="hero-fs-stamp">
-              <span className="stamp-kanji">一楽</span>
-              <span className="stamp-sub">いただきます！</span>
-            </div>
-
-            <div className="hero-fs-art-label">
-              <span className="hero-fs-desktop-latin">THE COMFORT BOWL</span>
-              <strong>職人のこだわり</strong>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Red Japanese Seal Stamp - Fixed to Bottom Right Corner of Hero Section */}
+      <div className="hero-fs-corner-stamp" title="Ichiraku Kitchen Stamp">
+        <span className="corner-stamp-kanji">一楽</span>
+        <span className="corner-stamp-sub">いただきます！</span>
       </div>
 
       {/* Floating Bottom Scroll Prompt */}

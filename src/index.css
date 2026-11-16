@@ -966,9 +966,8 @@ a {
 
 .hero-fs-inner {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 48px;
   position: relative;
   z-index: 2;
   flex: 1;
@@ -978,7 +977,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 24px;
+  padding-right: 48px;
+  z-index: 3;
 }
 
 .hero-fs-kicker {
@@ -1074,32 +1074,30 @@ a {
   padding-top: 24px;
 }
 
-/* Right Artwork Frame */
+/* Right Artwork Frame - Pure Floating Bowl Without Background */
 .hero-fs-right {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-fs-art-card {
-  width: min(90%, 480px);
+.hero-fs-bowl-wrap {
+  width: min(100%, 460px);
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #e5ebd9 0%, #d4dfc8 50%, #eae6d9 100%);
-  position: relative;
-  overflow: hidden;
   display: grid;
   place-items: center;
-  box-shadow: 0 32px 70px rgba(18, 42, 31, 0.15);
-  border: 1px solid rgba(18, 42, 31, 0.08);
+  position: relative;
 }
 
 .hero-fs-bowl {
   position: relative;
-  width: 78%;
+  width: 90%;
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, #f7f4ea 0 45%, #c8c5b6 46% 50%, #fff 51% 55%, #cfcdc1 56% 58%, transparent 59%);
-  filter: drop-shadow(0 28px 24px rgba(18, 42, 31, 0.22));
+  filter: drop-shadow(0 32px 34px rgba(18, 42, 31, 0.24));
   display: grid;
   place-items: center;
   transform: rotate(-8deg);
@@ -1161,52 +1159,44 @@ a {
   color: #6e9361;
 }
 
-.hero-fs-stamp {
+/* Red Japanese Seal Stamp - Fixed to Bottom Right Corner of Hero Section */
+.hero-fs-corner-stamp {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 36px;
+  z-index: 10;
   background: var(--vermilion);
   color: #fff;
-  padding: 10px 14px;
+  padding: 12px 18px;
+  border-radius: 4px;
   font-family: var(--font-jp);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: rotate(-4deg);
-  box-shadow: 0 4px 14px rgba(201, 62, 47, 0.3);
+  transform: rotate(-3deg);
+  box-shadow: 0 8px 24px rgba(235, 94, 65, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s var(--ease);
+  cursor: default;
+  user-select: none;
 }
 
-.hero-fs-stamp .stamp-kanji {
-  font-size: 18px;
+.hero-fs-corner-stamp:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.corner-stamp-kanji {
+  font-size: 24px;
   font-weight: 700;
   line-height: 1;
+  letter-spacing: 0.05em;
 }
 
-.hero-fs-stamp .stamp-sub {
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
-  margin-top: 2px;
-}
-
-.hero-fs-art-label {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  color: var(--forest);
-}
-
-.hero-fs-art-label span {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-}
-
-.hero-fs-art-label strong {
-  font-family: var(--font-jp);
-  font-size: 16px;
-  font-weight: 400;
+.corner-stamp-sub {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-top: 4px;
+  opacity: 0.95;
 }
 
 /* Scroll Prompt */
@@ -3888,6 +3878,11 @@ a {
     text-align: center;
     gap: 36px;
   }
+  .hero-fs-right {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
   .hero-fs-left {
     padding-right: 0;
     align-items: center;
@@ -3956,8 +3951,24 @@ a {
     padding: 110px 0 40px;
     min-height: auto;
   }
-  .hero-fs-art-card {
-    width: min(100%, 340px);
+  .hero-fs-right {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .hero-fs-bowl-wrap {
+    width: min(100%, 320px);
+  }
+  .hero-fs-corner-stamp {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 14px;
+  }
+  .corner-stamp-kanji {
+    font-size: 20px;
+  }
+  .corner-stamp-sub {
+    font-size: 10px;
   }
   .hero-fs-hiragana-container {
     gap: 28px;
